@@ -16,12 +16,15 @@ def pick_random_word():
 def reveal_letters(word, letters): 
 
     underline_word = []
-    
+    # make words underline
     for i in range(len(word)):
         picked_word = word.replace(word[i],"_")
         underline_word.append(picked_word[i])
- 
+    
+    word = word.upper()
+
     for letter in letters:
+        letter = letter.upper()
         if letter in word:
             index = word.find(letter)
             while index != -1:
